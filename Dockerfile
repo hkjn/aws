@@ -11,7 +11,7 @@ FROM hkjn/alpine
 
 MAINTAINER Henrik Jonsson <me@hkjn.me>
 
-ENV USER user
+ENV USER awsuser
 
 # Install AWS CLI tools.
 RUN apk --no-cache add python3 && \
