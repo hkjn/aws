@@ -22,4 +22,4 @@ RUN apk --no-cache add python3 && \
 USER $USER
 WORKDIR $HOME
 
-CMD ["aws"]
+ENTRYPOINT ["aws"]
