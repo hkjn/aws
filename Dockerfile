@@ -11,15 +11,13 @@ FROM hkjn/alpine
 
 MAINTAINER Henrik Jonsson <me@hkjn.me>
 
-ENV USER awsuser
-
 # Install AWS CLI tools.
 RUN apk --no-cache add python3 && \
     pip3 install --upgrade pip setuptools && \
     pip3 install awscli && \
-    adduser -D $USER
+    adduser -D awsuser
 
-USER $USER
-WORKDIR $HOME
+USER awsuser
+WORKDIR /home/awsuser
 
 ENTRYPOINT ["aws"]
